@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>💖✨ Happy Birthday Davina! ✨💖</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="loginScreen" class="login-screen">
+      <div class="login-container">
+        <div class="penguin-container">
+          <img
+            src="images/penguin.jpg"
+            alt="Cute Penguin"
+            class="penguin-image"
+          />
+        </div>
+        <h2 class="login-title">What is this guy's name?</h2>
+        <div class="login-form">
+          <input
+            type="text"
+            id="nameInput"
+            placeholder="Enter the penguin's name..."
+            class="name-input"
+          />
+          <button id="loginBtn" class="login-button">Enter</button>
+        </div>
+        <div id="errorMessage" class="error-message" style="display: none">
+          NOPE WRONG!
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="mainContent" style="display: none">
+      <div class="card" role="region" aria-label="Virtual birthday card">
+        <canvas class="sparkles" id="sparkles" aria-hidden="true"></canvas>
+        <header>
+          <h1>Happy Birthday, <span id="name">Love</span>! 🎂</h1>
+          <p class="subtitle">23, you're unc now :0</p>
+          <div class="cta">
+            <button
+              id="memoriesBtn"
+              aria-haspopup="dialog"
+              aria-controls="memoriesModal"
+            >
+              Birthday Card 💌
+            </button>
+            <button
+              id="giftBtn"
+              aria-haspopup="dialog"
+              aria-controls="giftModal"
+            >
+              Gift 🎁
+            </button>
+          </div>
+          <div class="typewrap" aria-live="polite">
+            <span class="type" id="type"></span>
+          </div>
+        </header>
+
+        <main>
+          <section class="panel" aria-label="Photo gallery">
+            <h3 style="margin-bottom: 10px">My favourite memories of you</h3>
+            <div class="gallery" id="gallery">
+              <img src="images/memory1.jpg" alt="Memory 1" />
+              <img src="images/memory2.jpg" alt="Memory 2" />
+              <img src="images/memory3.jpg" alt="Memory 3" />
+              <img src="images/memory4.jpg" alt="Memory 4" />
+              <img src="images/memory5.jpg" alt="Memory 5" />
+              <img src="images/memory6.jpg" alt="Memory 6" />
+              <img src="images/memory7.jpg" alt="Memory 7" />
+              <img src="images/memory8.jpg" alt="Memory 8" />
+              <img src="images/memory9.jpg" alt="Memory 9" />
+              <img src="images/memory10.jpg" alt="Memory 10" />
+              <img src="images/memory11.jpg" alt="Memory 11" />
+              <img src="images/memory12.jpg" alt="Memory 12" />
+              <img src="images/memory13.jpg" alt="Memory 13" />
+              <img src="images/memory14.jpg" alt="Memory 14" />
+              <img src="images/memory15.jpg" alt="Memory 15" />
+              <img src="images/memory16.jpg" alt="Memory 16" />
+              <img src="images/memory17.jpg" alt="Memory 17" />
+              <img src="images/memory18.jpg" alt="Memory 18" />
+              <img src="images/memory19.jpg" alt="Memory 19" />
+              <img src="images/memory20.jpg" alt="Memory 20" />
+              <img src="images/memory21.jpg" alt="Memory 21" />
+            </div>
+          </section>
+        </main>
+
+        <footer>
+          Made with ❤️ by
+          <span contenteditable="true" aria-label="Komchan">Komchan</span>
+        </footer>
+      </div>
+    </div>
+
+    <div
+      class="modal"
+      id="memoriesModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="memoriesTitle"
+    >
+      <div class="modal-inner">
+        <div class="modal-header">
+          <h2 id="memoriesTitle" style="margin: 0; font-size: 20px">
+            I know you said you don't like birthday cards, so I made it virtual
+            :p 💌
+          </h2>
+          <button class="close" id="closeModal" aria-label="Close">
+            Close ✕
+          </button>
+        </div>
+        <div class="modal-body">
+          <div style="padding: 10px 0; line-height: 1.7; font-size: 16px">
+            <p
+              style="
+                margin-bottom: 20px;
+                font-style: italic;
+                color: var(--muted);
+              "
+            ></p>
+            <p>To Davina,</p>
+            <p style="margin-bottom: 18px">
+              Happy 23rd Birthday to my beautiful girl. You've changed my world
+              in ways I'll always be grateful for, I look forward to spending
+              every moment with you.
+            </p>
+            <p style="margin-bottom: 18px">
+              I love spending time with you, messing about, cycling together,
+              playing video games, watching minecraft civilisation simulation
+              videos, listening to music, going to spoons, basically everything.
+              Doing anything is 10x better with you and when you're not there it
+              feels like something is missing.
+            </p>
+            <p style="margin-bottom: 18px">
+              Thank you for being you. Me, Pico, and Kevin are so lucky to have
+              you, you make us so happy!.
+            </p>
+            <p style="margin-bottom: 20px">
+              Can't wait to celebrate more birthdays together.
+            </p>
+            <p
+              style="margin-bottom: 0; font-style: italic; color: var(--muted)"
+            >
+              From,<br />Komchan &lt;3
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal"
+      id="giftModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="giftTitle"
+    >
+      <div class="modal-inner">
+        <div class="modal-header">
+          <h2 id="giftTitle" style="margin: 0; font-size: 20px">
+            Your Birthday Gift
+          </h2>
+          <button class="close" id="closeGiftModal" aria-label="Close">
+            Close ✕
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="scratch-container">
+            <div class="scratch-instructions">
+              <p>Scratch below for your gift!</p>
+            </div>
+            <div class="scratch-card">
+              <canvas id="scratchCanvas" class="scratch-canvas"></canvas>
+              <div class="gift-reveal">
+                <img
+                  src="https://images.asics.com/is/image/asics/1183C102_001_SR_RT_GLB?qlt=80&wid=1024&hei=768&bgc=255,255,255&resMode=bisharp"
+                  alt="Onitsuka Tigers"
+                  class="gift-image"
+                />
+                <h3>Onitsuka Tigers!</h3>
+                <p>You said you needed some new shoes :p</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
